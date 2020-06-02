@@ -7,39 +7,75 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="vendor/font-awesome-4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <!-- Fav icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
   
   <!-- Header start -->
-  <header class="header">
+  <div class="header__top" id="start">
     <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="header__contact-info">
+            <div class="contact-info__phone">
+              <a href="tel:+70000000000" class="contact-info__phone-number"><i class="fa fa-phone" aria-hidden="true"></i>+7 (000) 000 00 00</a>
+            </div>
+            <div class="contact-info__email">
+              <a href="#!" class="contact-info__email-adress"><i class="fa fa-envelope" aria-hidden="true"></i> delaysam@delay.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <header class="header">
+    <div class="container header__content">
       <div class="row header__wrapper">
         <div class="col-4">
-          <a href="#!" class="logo">
+          <a href="#start" class="logo js-scroll">
             <img src="img/svg/DelaySam.svg" alt="delaysam" class="header__logo">
           </a>
         </div>
-        <div class="col-8">
-          <nav>
+        <div class="col-8 header__nav-wrapper">
+          <nav class="header__nav">
             <ul class="nav justify-content-end">
               <li class="nav-item">
-                <a href="#!" class="nav-link header__nav-link">О нас</a>
+                <a href="#about" class="nav-link header__nav-link js-scroll">О нас</a>
               </li>
               <li class="nav-item">
-                <a href="#!" class="nav-link header__nav-link">Прайс лист</a>
+                <a href="#price" class="nav-link header__nav-link js-scroll">Прайс лист</a>
               </li>
               <li class="nav-item">
-                <a href="#!" class="nav-link header__nav-link">Примеры работ</a>
+                <a href="#works" class="nav-link header__nav-link js-scroll">Примеры работ</a>
               </li>
               <li class="nav-item">
-                <a href="#!" class="nav-link header__nav-link">Контакты</a>
+                <a href="#book" class="nav-link header__nav-link js-scroll">Заказать работу</a>
               </li>
               <li class="nav-item">
-                <a href="#!" class="nav-link header__nav-link"><i class="fa fa-user" aria-hidden="true"></i></a>
+                <a href="#!" class="nav-link header__nav-link enter-btn" data-fancybox data-src="#registration" href="javascript:;"><i class="fa fa-user" aria-hidden="true"></i></a>
               </li>
             </ul>
+            <div class="header__nav-close">
+              <span class="header__nav-close-line">
+              </span><span class="header__nav-close-line"></span>
+            </div>
           </nav>
+          <div class="header__burger burger">
+            <span class="burger__line burger__line-first"></span>
+            <span class="burger__line burger__line-second"></span>
+            <span class="burger__line burger__line-third"></span>
+          </div>
         </div>
       </div>
     </div>
@@ -47,18 +83,18 @@
   <!-- Header end -->
 
   <!-- About start -->
-  <section class="about">
+  <section class="about" id="about">
     <div class="container">
       <div class="row">
-        <div class="col-5">
-          <div class="about__title">
-            Больше - лучше!
+        <div class="col-12 about__wrapper">
+          <div class="about__desc">
+            <h2 class="about__title">
+              Больше - лучше!
+            </h2>
+            <div class="about__text">
+              Предприниматели в сети интернет и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. Кстати, активно развивающиеся страны третьего мира представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть разоблачены.
+            </div>
           </div>
-          <div class="about__text">
-            Предприниматели в сети интернет и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. Кстати, активно развивающиеся страны третьего мира представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть разоблачены.
-          </div>
-        </div>
-        <div class="col-7">
           <img src="img/ERZ2RpxWoAEpDCS.jpg" alt="man" width="400px" height="300px" class="img-fluid about__img">
         </div>
       </div>
@@ -67,52 +103,48 @@
   <!-- About end -->
 
   <!-- Price start -->
-  <section class="price">
+  <section class="price" id="price">
     <div class="container">
-      <div class="row price__wrapper">
-        <div class="col-3">
-          <div class="price__card">
-            <i class="fa fa-sliders" aria-hidden="true"></i> <br>
-            <div class="price__name">
-              SEO
-            </div>
-            <div class="price__number">
-              300 <i class="fa fa-rub" aria-hidden="true"></i>
-            </div>
+      <h3 class="price__title">Наши услуги</h3>
+      <div class="price__cards">
+        <div class="price__card">
+          <div class="price__card-title">
+            HTML вёрстка  - <span class="price__price">1000<i class="fa fa-rub" aria-hidden="true"></i></span>
           </div>
+          <div class="price__card-desc">
+            <ul>
+              <li class="price__card-desc-text"><i class="fa fa-code" aria-hidden="true"></i>Качественный код</li>
+              <li class="price__card-desc-text"><i class="fa fa-diamond" aria-hidden="true"></i>Красивый результат</li>
+              <li class="price__card-desc-text"><i class="fa fa-search" aria-hidden="true"></i>СЕО настройка</li>
+            </ul>
+          </div>
+          <a href="#book" class="price__btn js-scroll">Заказать</a>
         </div>
-        <div class="col-3">
-          <div class="price__card">
-            <i class="fa fa-address-card-o" aria-hidden="true"></i> <br>
-            <div class="price__name">
-              HTML
-            </div>
-            <div class="price__number">
-              200 <i class="fa fa-rub" aria-hidden="true"></i>
-            </div>
+        <div class="price__card">
+          <div class="price__card-title">
+            Разработка дизайна - <span class="price__price">1000<i class="fa fa-rub" aria-hidden="true"></i></span>
           </div>
+          <div class="price__card-desc">
+            <ul>
+              <li class="price__card-desc-text"><i class="fa fa-desktop" aria-hidden="true"></i>Качественный макет</li>
+              <li class="price__card-desc-text"><i class="fa fa-diamond" aria-hidden="true"></i>Красивый результат</li>
+              <li class="price__card-desc-text"><i class="fa fa-search" aria-hidden="true"></i>СЕО настройка</li>
+            </ul>
+          </div>
+          <a href="#book" class="price__btn js-scroll">Заказать</a>
         </div>
-        <div class="col-3">
-          <div class="price__card">
-            <i class="fa fa-paint-brush" aria-hidden="true"></i> <br>
-            <div class="price__name">
-              CSS
-            </div>
-            <div class="price__number">
-              500 <i class="fa fa-rub" aria-hidden="true"></i>
-            </div>
+        <div class="price__card">
+          <div class="price__card-title">
+            HTML вёрстка  - <span class="price__price">1000<i class="fa fa-rub" aria-hidden="true"></i></span>
           </div>
-        </div>
-        <div class="col-3">
-          <div class="price__card">
-            <i class="fa fa-code" aria-hidden="true"></i> <br>
-            <div class="price__name">
-              JS
-            </div>
-            <div class="price__number">
-              700 <i class="fa fa-rub" aria-hidden="true"></i>
-            </div>
+          <div class="price__card-desc">
+            <ul>
+              <li class="price__card-desc-text"><i class="fa fa-code" aria-hidden="true"></i>Качественный код</li>
+              <li class="price__card-desc-text"><i class="fa fa-diamond" aria-hidden="true"></i>Красивый результат</li>
+              <li class="price__card-desc-text"><i class="fa fa-search" aria-hidden="true"></i>СЕО настройка</li>
+            </ul>
           </div>
+          <a href="#book" class="price__btn js-scroll">Заказать</a>
         </div>
       </div>
     </div>
@@ -120,40 +152,285 @@
   <!-- Price end -->
 
   <!-- Work start -->
-  <section class="work">
+  <section class="work" id="works">
     <div class="container">
       <h3 class="work__title">
         Наши работы
       </h3>
-      <div class="row">
+      <div class="row works__wrapper">
         <div class="col-4 work__wrapper">
           <img src="img/work-1.jpg" alt="work-1" class="work__img">
-          <div class="work__img-desc">
+          <a href="#!" class="work__img-desc" data-fancybox data-src="#workModalOne" href="javascript:;">
             Узнать больше
-          </div>
+          </a>
         </div>
         <div class="col-4 work__wrapper">
           <img src="img/work-2.jpg" alt="work-2" class="work__img">
-          <div class="work__img-desc">
+          <a href="#!" class="work__img-desc" data-fancybox data-src="#workModalTwo" href="javascript:;">
             Узнать больше
-          </div>
+          </a>
         </div>
         <div class="col-4 work__wrapper">
           <img src="img/work-3.jpg" alt="work-3" class="work__img">
-          <div class="work__img-desc">
+          <a href="#!" class="work__img-desc" data-fancybox data-src="#workModalThree" href="javascript:;">
             Узнать больше
-          </div>
+          </a>
         </div>
       </div>
     </div>
   </section>
   <!-- Work end -->
 
+  <!-- book start -->
+
+  <section class="book" id="book">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 book__wrapper">
+          <div class="book__info">
+            <h3 class="book__info-desc">
+              Если вам понравились наши работы - оставляёте заявку!
+            </h3>
+          </div>
+          <form class="book__form">
+            <input type="text" class="book__form-name" placeholder="Ваше имя">
+            <input type="text" class="book__form-email" placeholder="Ваш email">
+            <textarea class="book__form-task" placeholder="Описание задачи"></textarea>
+            <button type="submit" class="book__btn">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- book end -->
+
+  <!-- feedback start -->
+
+  <section class="feedback">
+    <div class="container">
+      <h3 class="feedback__title">
+        Feedback (обратная связь)
+      </h3>
+      <div class="row">
+        <div class="col-12">
+          <nav>
+            <div class="nav nav-tabs feedback__names justify-content-center" id="nav-tab" role="tablist">
+              <a class="nav-item nav-link active feedback__name" id="nav-home-tab" data-toggle="tab" href="#good-feedback" role="tab" aria-controls="good-feedback" aria-selected="true">Положительные отзывы</a>
+              <a class="nav-item nav-link feedback__name" id="nav-profile-tab" data-toggle="tab" href="#development-feedback" role="tab" aria-controls="development-feedback" aria-selected="false">Пожелания</a>
+              <a class="nav-item nav-link feedback__name" id="nav-contact-tab" data-toggle="tab" href="#bad-feedback" role="tab" aria-controls="bad-feedback" aria-selected="false">Отрицательные отзывы</a>
+            </div>
+          </nav>
+          <div class="tab-content feedback__texts" id="nav-tabContent">
+            <div class="tab-pane fade show active feedback__text feedback__text-good" id="good-feedback" role="tabpanel" aria-labelledby="nav-home-tab">
+              <div class="feedback__good">
+                <div class="feedback-author feedback__good-author">
+                  Студия Light <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                </div>
+                <div class="feedback-desc">
+                  - <span class="feedback-quote">"</span>Повседневная практика показывает, что реализация намеченных плановых заданий позволяет выполнять важные задания по разработке направлений прогрессивного развития. Товарищи! новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития<span class="feedback-quote">"</span>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade feedback__text feedback__text-development" id="development-feedback" role="tabpanel" aria-labelledby="nav-profile-tab">
+              <div class="feedback__development">
+                <div class=" feedback-author feedback__development-author">
+                  Риэлторская конмания DomNeDostroy <i class="fa fa-keyboard-o" aria-hidden="true"></i>
+                </div>
+                <div class="feedback-desc">
+                  - <span class="feedback-quote">"</span>Повседневная практика показывает, что реализация намеченных плановых заданий позволяет выполнять важные задания по разработке направлений прогрессивного развития. Товарищи!<span class="feedback-quote">"</span>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade feedback__text feedback__text-bad" id="bad-feedback" role="tabpanel" aria-labelledby="nav-contact-tab">
+              <div class="feedback__bad">
+                <div class="feedback-author feedback__bad-author">
+                  Банк OtdaiKredit <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                </div>
+                <div class="feedback-desc">
+                  - <span class="feedback-quote">"</span>Взяли кридит, чтобы раздать зарплаты и не вернули(<span class="feedback-quote">"</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- feedback end -->
+
+  <!-- footer start -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 footer-content">
+          <a href="#start" class="js-scroll">
+          <img src="img/svg/delaysam-min.svg" alt="DelaySam" class="footer-logo mr-2">
+          </a>
+          <i class="fa fa-copyright" aria-hidden="true"></i>
+          <span class="author"><a href="https://github.com/NyTakoeSebe">NyTakoe</a>, 2020</span>
+            <div class="contact-info__phone">
+              <a href="tel:+70000000000" class="contact-info__phone-number"><i class="fa fa-phone" aria-hidden="true"></i>+7 (000) 000 00 00</a>
+            </div>
+            <div class="contact-info__email">
+              <a href="#!" class="contact-info__email-adress"><i class="fa fa-envelope" aria-hidden="true"></i> delaysam@delay.com</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- footer end -->
+
+  <!-- Modal window -->
+
+  <div id="workModalTwo">
+    <div class="work-modal__wrapper">
+      <div class="work-modal__left">
+        <img src="img/more-work-1.jpg" alt="work-1" class="work-modal__img">
+      </div>
+      <div class="work-modal__right">
+        <h3 class="work-modal__title">
+          Проект для студии Light
+        </h3>
+        <div class="work-modal__desc">
+          <p>
+            А ещё действия представителей оппозиции, инициированные исключительно синтетически, призваны к ответу. В целом, конечно, семантический разбор внешних противодействий требует анализа вывода текущих активов. Повседневная практика показывает, что глубокий уровень погружения не оставляет шанса для как самодостаточных, так и внешне зависимых концептуальных решений.
+          </p>
+          <p><span class="work-modal__text-title">В данной работе было:</span></p>
+          <ul>
+            <li class="work-modal__list-item">
+              <span class="work-modal__list-content">Разработка макета</span>
+            </li>
+            <li class="work-modal__list-item">
+              <span class="work-modal__list-content">Хорошая графика</span>
+            </li>
+            <li class="work-modal__list-item">
+              <span class="work-modal__list-content">Desktop first</span>
+            </li>
+            <li class="work-modal__list-item">
+              <span class="work-modal__list-content">Работа с иностранным заказщиком</span>
+            </li>
+            <li class="work-modal__list-item">
+              <span class="work-modal__list-content">Довольный клиент</span>
+            </li>
+          </ul>
+          <div class="work-modal__mark">
+            <div class="work-modal__mark-title">
+              Отценка работы: <span class="work-modal__mark-good">9</span>/<span class="work-modal__mark-max">10</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="workModalOne">
+    <div class="work-modal__wrapper">
+      <div class="work-modal__left">
+        <img src="img/more-work-2.jpg" alt="work-2" class="work-modal__img">
+      </div>
+      <div class="work-modal__right">
+        <h3 class="work-modal__title">
+          Сайт для риэлторского агенства
+        </h3>
+        <div class="work-modal__desc">
+          <p>
+            А ещё действия представителей оппозиции, инициированные исключительно синтетически, призваны к ответу. В целом, конечно, семантический разбор внешних противодействий требует анализа вывода текущих активов. Повседневная практика показывает, что глубокий уровень погружения не оставляет шанса для как самодостаточных, так и внешне зависимых концептуальных решений.
+          </p>
+          <p><span class="work-modal__text-title">В данной работе было:</span></p>
+          <ul>
+            <li class="work-modal__list-item">
+              <span class="work-modal__list-content">Grid сетка</span>
+            </li>
+            <li class="work-modal__list-item">
+              <span class="work-modal__list-content">Была работа на стороне клиента</span>
+            </li>
+            <li class="work-modal__list-item">
+              <span class="work-modal__list-content">Сайт полносью адаптивен</span>
+            </li>
+            <li class="work-modal__list-item">
+              <span class="work-modal__list-content">Работа с медаи</span>
+            </li>
+            <li class="work-modal__list-item">
+              <span class="work-modal__list-content">Довольный клиент</span>
+            </li>
+          </ul>
+          <div class="work-modal__mark">
+            <div class="work-modal__mark-title">
+              Отценка работы: <span class="work-modal__mark-good">8</span>/<span class="work-modal__mark-max">10</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="workModalThree">
+    <div class="work-modal__wrapper">
+      <div class="work-modal__left">
+        <img src="img/more-work-3.jpg" alt="work-3" class="work-modal__img">
+      </div>
+      <div class="work-modal__right">
+        <h3 class="work-modal__title">
+          Проект для туристического агенства
+        </h3>
+        <div class="work-modal__desc">
+          <p>
+            А ещё действия представителей оппозиции, инициированные исключительно синтетически, призваны к ответу. В целом, конечно, семантический разбор внешних противодействий требует анализа вывода текущих активов. Повседневная практика показывает, что глубокий уровень погружения не оставляет шанса для как самодостаточных, так и внешне зависимых концептуальных решений.
+          </p>
+          <p><span class="work-modal__text-title">В данной работе было:</span></p>
+          <ul>
+            <li class="work-modal__list-item">
+              <span class="work-modal__list-content">Grid сетка</span>
+            </li>
+            <li class="work-modal__list-item">
+              <span class="work-modal__list-content">Проведины SEO работы</span>
+            </li>
+            <li class="work-modal__list-item">
+              <span class="work-modal__list-content">Сайт полносью адаптивен</span>
+            </li>
+            <li class="work-modal__list-item">
+              <span class="work-modal__list-content">Хорошая оптимизация</span>
+            </li>
+            <li class="work-modal__list-item">
+              <span class="work-modal__list-content">Довольный клиент</span>
+            </li>
+          </ul>
+          <div class="work-modal__mark">
+            <div class="work-modal__mark-title">
+              Отценка работы: <span class="work-modal__mark-good">10</span>/<span class="work-modal__mark-max">10</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="registration">
+    <div class="registration__wrapper">
+      <div class="registration__title">
+        Регистрация
+      </div>
+      <form class="registration__form">
+        <input type="text" placeholder="Введите ваш email" class="registration__email">
+        <input type="text" placeholder="Введите ваше имя" class="registration__name">
+        <input type="password" placeholder="Введите ваш пароль" class="registration__password">
+        <input type="password" placeholder="Введите пароль повторно" class="registration__password-second">
+        <button type="submit" class="registration__btn">Создать аккаунт</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal window end -->
+
   <!-- Скрипты -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
